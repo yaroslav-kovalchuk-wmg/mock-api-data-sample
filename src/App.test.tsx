@@ -38,10 +38,10 @@ it('should contain John', async () => {
             <App />
         </Provider>
     );
-    screen.debug()
+
     const usersList = await screen.findByTestId('users-list');
 
     expect(usersList).toHaveAttribute('title', 'Users');
     expect(usersList).toContain('John');
-
+    screen.debug()
 });
