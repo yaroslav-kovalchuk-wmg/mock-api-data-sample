@@ -1,4 +1,3 @@
-import axios from "axios";
 import {IUser} from "../models/IUser";
 
 // export const fetchUsers = async (thunkAPI) => {
