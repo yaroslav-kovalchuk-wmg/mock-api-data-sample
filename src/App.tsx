@@ -11,15 +11,20 @@ function App() {
         dispatch(fetchUsers())
     }, [ ])
 
+    console.log('users', users)
+
     return (
     <div className="App">
         {isLoading ? <h1>Loading...</h1> :
         <>
             {error && <h1>{error}</h1>}
             <ul data-testid="users-list" title="Users" >
-                {users.map((user) => (
-                    <li key={user.id}>{user.name}</li>
-                ))}
+                {users.map((user) => {
+                    console.log('maped user', user)
+                    return (
+                        <li key={user.id}>{user.name}</li>
+                    )
+                })}
             </ul>
 
           </>
